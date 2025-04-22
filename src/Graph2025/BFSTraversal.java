@@ -32,14 +32,12 @@ public class BFSTraversal {
             int curr= queue.poll();
             res.add(curr);
 
-            for(int node: adj.get(curr)){
-                if(!visited[node]){
-                    visited[node]=true;
+            for(int node: adj.get(curr)) {
+                if (!visited[node]) {
+                    visited[node] = true;
                     queue.add(node);
                 }
             }
-
-
         }
         return res;
 
